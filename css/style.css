@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/*CONFIGURAÇÕES GERAIS*/
+:root {
+    --main-color: #cd9c52;
+    --black: #13131a;
+    --bg: #010103;
+    --border: 0.1rem solid rgba(255,255,255,0.3);
+    font-size: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: 0.2s linear;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: var(--bg);
+}
+
+section {
+    padding: 3rem 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    border-bottom: var(--border);
+    background-color: var(--bg);
+}
+
+.header section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.navbar a {
+    margin: 0 1rem;
+    font-size: 1.8rem;
+    color: #fff;
+
+}
+
+.navbar a:hover {
+    color: var(--main-color);
+    border-bottom: 0.1rem solid var(--main-color);
+    padding-bottom: 0.5rem;
+    font-size: 2.0rem;
+}
+
+/*ICONES */
+.icons {
+    color: #ffffff;
+    font-size: 30px;
+}
+
+.icons i {
+    margin: 1rem;
+    cursor: pointer;
+}
+
+.icons i:hover {
+    width: 40px;
+    height: 40px;
+    font-size: 40px;
+    color: #ffffffb2;
+}
+
+/*Botão */
+
+.btn {
+    background: var(--main-color);
+    color: #fff;
+    padding: 1rem 3rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+.btn:hover {
+    font-size: 1.9rem;
+    transition: 1s;
+    
+}
+
+/*CONTAINER HOME*/
+.home-container {
+    background: url("../images/home-img-pizza.png") no-repeat center center;
+    height: 100vh;
+    background-size: cover;
+}
+
+.home-container section {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.content {
+    max-width: 60rem;
+}
+
+.content h3 {
+    color: #fff;
+    font-size: 6rem;
+    font-weight: 200;
+}
+
+.content h3 span {
+    font-weight: 700;
+    display: block;
+
+}
+
+.content p {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 200;
+    line-height: 1.8;
+    padding: 1rem 0;
+
+}
+
+/*SOBRE NOS*/
+
+.titulo {
+    font-size: 4rem;
+    color: var(--main-color);
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.titulo span {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.sobre .row{
+    display: flex;
+    align-items: center;
+    background-color: var(--black);
+    gap: 1.5rem;
+}
+
+
+.sobre .row .content {
+    padding-top: 2rem;
+}
+
+.sobre .row .content h3 {
+    font-size: 3rem;
+    color: #fff;
+}
+
+.sobre .row .content p {
+    font-size: 1.6rem;
+    color: #fff;
+    padding: 1rem 0;
+    line-height: 1.8;
+}
+
+/*MENU*/  
+
+.box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.menu .box-container .box {
+    text-align: center;
+    border: var(--border);
+    padding: 5rem;
+    cursor: pointer;
+}
+
+
+.menu .box-container .box img {
+    height: 10rem;
+}
+
+.menu .box-container .box h3 {
+    color: #fff;
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+
+.menu .box-container .box .price {
+    color: #fff;
+    font-size: 2rem;
+    padding: 0.5rem;
+}
+
+.menu .box-container .box .price span {
+    font-size: 1.5rem;
+    text-decoration: line-through;
+    font-weight: lighter;
+}
+
+.menu .box-container .box:hover {
+    background-color: #fff;
+}
+
+.menu .box-container .box:hover>* {
+    color: var(--black)
+}
+
+/*AVALIAÇÕES*/
+.bi {
+    color: white;
+    font-size: 3rem;
+    width: 30px;
+    height: 30px;
+}
+
+.avaliacoes .box-container .box {
+    border: var(--border);
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+.avaliacoes .box-container .box p {
+    font-size: 1.5rem;
+    color: #fff;
+    padding: 2rem 0;
+    line-height: 1.8;
+    font-weight: lighter;
+}
+
+.avaliacoes .box-container .box h3 {
+    color: #fff;
+    font-size: 2rem;
+    margin: 1rem;
+}
+
+.avaliacoes .box-container .box .user {
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+}
+
+/*ENDEREÇO*/
+
+.endereco {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/*RODAPÉ*/
+
+.rodape {
+    text-align: center;
+}
+
+.rodape .top-footer {
+    padding: 1rem 0;
+}
+
+.rodape .top-footer .social {
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 24px;
+    margin: 0 10px;
+    padding: 20px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.rodape .top-footer .social:hover {
+    background-color: var(--main-color);
+}
+
+footer .botton-footer {
+    border-top: 2px solid #fff;
+    max-width: 400px;
+}
+
+footer .botton-footer p {
+    color: #fff;
+    margin-top: 10px;
+    font-size: 18px;
+}
